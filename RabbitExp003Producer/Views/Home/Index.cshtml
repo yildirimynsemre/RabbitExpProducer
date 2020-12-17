@@ -1,0 +1,23 @@
+﻿@model RabbitExp003Producer.Models.Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+
+
+</head>
+<body>
+    <h2>
+        Add And Update
+    </h2>
+    <div>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            @Html.TextBoxFor(Model => Model.FirstName, new { @value = "FirstName" })
+            @Html.TextBoxFor(Model => Model.LastName, new { @value = "LastName" })
+            @Html.TextBoxFor(Model => Model.Number, new { @value = "Number" })
+            @Html.TextBoxFor(Model => Model.Country, new { @value = "Country" })
+            <button type="submit">Save</button>
+        }
+    </div>
+</body>
